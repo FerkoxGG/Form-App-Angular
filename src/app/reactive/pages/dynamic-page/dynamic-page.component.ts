@@ -50,7 +50,7 @@ export class DynamicPageComponent {
           return 'Este campo es requerido';
 
         case 'minlength':
-          return `Mínimo ${ errors['minlength'].requiredLength } caracters.`;
+          return `Mínimo ${ errors['minlength'].requiredLength } caracteres.`;
       }
     }
 
