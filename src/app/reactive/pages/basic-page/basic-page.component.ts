@@ -23,7 +23,7 @@ export class BasicPageComponent implements OnInit {
 
   public myForm: FormGroup = this.fb.group({
     name: ['', [ Validators.required, Validators.minLength(3) ] ],
-    price: [0, [ Validators.required, Validators.min(0) ] ],
+    price: [0, [ Validators.required, Validators.min(10) ] ],
     inStorage: [0, [ Validators.required, Validators.min(0) ]],
   })
 
@@ -50,7 +50,7 @@ export class BasicPageComponent implements OnInit {
           return 'Este campo es requerido';
 
         case 'minlength':
-          return `Mínimo ${ errors['minlength'].requiredLength } caracters.`;
+          return `Mínimo ${ errors['minlength'].requiredLength } caracteres.`;
       }
     }
 
